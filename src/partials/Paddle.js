@@ -20,23 +20,30 @@ export default class Paddle {
         case down:
           this.down();
           break;
-
       }
     });
   }
 
-    up() {
-      //get max number
-      //either 0 or the ypositin minus the speed
-      this.y = Math.max(this.y - this.speed, 0);
-    }
+  coordinates(x, y, width, height) {
+    let leftX = x;
+    let rightX = x + width;
+    let topY = y;
+    let bottomY = y + height;
+      return { leftX, rightX, topY, bottomY };
+  }
 
-    down() {
-      //get the min number
-      //either the height of th board minus the height of the paddle
-      // or the y position plus the speed
-      this.y = Math.min(this.y + this.speed, this.boardHeight - this.height);
-    }
+  up() {
+    //get max number
+    //either 0 or the ypositin minus the speed
+    this.y = Math.max(this.y - this.speed, 0);
+  }
+
+  down() {
+    //get the min number
+    //either the height of th board minus the height of the paddle
+    // or the y position plus the speed
+    this.y = Math.min(this.y + this.speed, this.boardHeight - this.height);
+  }
 
   render(svg) {
     let rect = document.createElementNS(SVG_NS, 'rect');

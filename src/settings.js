@@ -12,4 +12,3 @@ export const KEYS = {
   down: 'ArrowDown',     // player 2 down key
   spaceBar: ' ', // we'll use this later...
 }
-
