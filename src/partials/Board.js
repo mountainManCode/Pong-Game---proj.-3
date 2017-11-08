@@ -4,10 +4,7 @@ export default class Board {
 
   constructor(width, height) {
     this.width = width;
-    this.height = height;
-  
-    // this.gameBoard = document.getElementById(this.element)
-    
+    this.height = height;    
   }
 
   render(svg) {
@@ -15,7 +12,7 @@ export default class Board {
     let rect = document.createElementNS(SVG_NS, 'rect');
     rect.setAttributeNS(null, 'width', this.width);
     rect.setAttributeNS(null, 'height', this.height);
-    rect.setAttributeNS(null, 'fill', '#353535');
+    rect.setAttributeNS(null, 'fill', 'gradient(red, blue)');
     
     svg.appendChild(rect);
 
@@ -29,7 +26,6 @@ export default class Board {
     line.setAttributeNS(null, 'stroke-width', '5');
 
     svg.appendChild(line);
-
   }
 }
 

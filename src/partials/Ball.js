@@ -7,7 +7,6 @@ export default class Ball {
     this.boardHeight = boardHeight;
     this.direction = 1;
     this.ping = new Audio('public/sounds/pong-01.wav');
-    
     this.reset();
   }
   
@@ -20,10 +19,8 @@ export default class Ball {
     while ( this.vy ===0) {
       this.vy = Math.floor(Math.random() * 10 - 5);
     }
-    
-    //Vector of the ball below
-    this.vy = Math.floor(Math.random() * 10 - 5); 
-    this.vx = this.direction * (6 - Math.abs(this.vy));
+        //Vector of the ball below
+      this.vx = this.direction * (6 - Math.abs(this.vy));
   }
   
   wallCollision(paddleOne, paddleTwo) {
@@ -41,24 +38,17 @@ export default class Ball {
     } else if (hitTop || hitBottom) {
       this.vy = -this.vy;
     }
-    
-    
-    // if (hitLeft || hitRight) {
-    //   this.vx = -this.vx;
-    // } else if (hitTop || hitBottom) {
-    //   this.vy = -this.vy;
-    // }
   }
   
   paddleCollision(paddleOne, paddleTwo) {
     if (this.vx > 0) {
-      //Detect collision on right side (paddleTwo)
+          //Detect collision on right side (paddleTwo)
       let paddle = paddleTwo.coordinates(paddleTwo.x, paddleTwo.y, paddleTwo.width, paddleTwo.height);
       let { leftX, topY, bottomY } = paddle; 
       
       if (
-        // right edge of the ball is >= left edge of the paddle
-        //ball Y is >= paddle top Y && ball Y is <= paddle bottom Y
+          // right edge of the ball is >= left edge of the paddle
+           //ball Y is >= paddle top Y && ball Y is <= paddle bottom Y
         this.x + this.ballRadius >= leftX 
         && this.y >= topY
         && this.y <= bottomY
@@ -66,14 +56,12 @@ export default class Ball {
         this.vx = -this.vx;
         this.ping.play();
       }
-    } 
-    else {
-      //Detect collision on left side (paddleOne)
-      //get player 1 coords
+    } else {
+          //Detect collision on left side (paddleOne)
       let paddle = paddleOne.coordinates(paddleOne.x, paddleOne.y, paddleOne.width, paddleOne.height);
       let { rightX, topY, bottomY } = paddle;
       if (
-        //detect collision on left
+         //detect collision on left
         this.x - this.ballRadius <= rightX
         && this.y >= topY
         && this.y <= bottomY

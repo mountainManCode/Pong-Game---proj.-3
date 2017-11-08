@@ -1,6 +1,18 @@
 # Pong Game
 
-A basic pong game using SVGs.
+A basic Pong Game with 2 wild balls. The game was built with vanilla Javascript with the graphics being rendered in SVG.
+
+## Description
+
+The Pong Game is a 2 player game. First to 3 points is the winner.
+
+## Built With
+
+* Javascript
+* SVG
+* CSS3
+* HTML5 
+* Webpack - task runner
 
 ## Setup
 
@@ -25,3 +37,15 @@ A basic pong game using SVGs.
 **Player 2:**
 * ▲ : up
 * ▼: down
+
+**Pause Game**
+* Space bar
+
+## Authors
+
+* **Aaron Griffiths** - (https://github.com/mountainmancode)
+
+## Contributors
+
+* Thank you Mandi from Red Academy for the code along of Pong.
+

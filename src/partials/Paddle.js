@@ -33,8 +33,8 @@ export default class Paddle {
   }
 
   up() {
-    //get max number
-    //either 0 or the ypositin minus the speed
+    //get the max number
+    //either 0 or the y-position minus the speed
     this.y = Math.max(this.y - this.speed, 0);
   }
 

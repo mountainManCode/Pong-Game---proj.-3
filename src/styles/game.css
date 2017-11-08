@@ -77,10 +77,22 @@ body {
   height: 100vh;
   justify-content: center;
   width: 100%;
+  background-image: linear-gradient( to right, #7B920A, #12fff7);  
 }
 
 h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem; 
   text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.players {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
 }
