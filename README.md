@@ -2,7 +2,7 @@
 
 A basic Pong Game with 2 wild balls. The game was built with vanilla Javascript with the graphics being rendered in SVG.
 
-  ![Pong Screen Shot](images/pong.png "Pong Game")
+  ![Pong Screen Shot](public/images/pong.png "Pong Game")
 
 ## Description
 
