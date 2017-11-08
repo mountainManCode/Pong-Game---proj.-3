@@ -2,6 +2,8 @@
 
 A basic Pong Game with 2 wild balls. The game was built with vanilla Javascript with the graphics being rendered in SVG.
 
+  ![Pong Screen Shot](images/pong.png "Pong Game")
+
 ## Description
 
 The Pong Game is a 2 player game. First to 3 points is the winner.
